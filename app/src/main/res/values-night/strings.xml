@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Dice Roller</string>
-    <string name="happy_birth_day_hridoy">Happy Birthday,Hridoy</string>
-    <string name="from_google">From Google</string>
-    <string name="roll">Roll</string>
-    <string name="result" />
-    <string name="todo">TODO</string>
-</resources>
