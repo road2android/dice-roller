@@ -16,15 +16,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck,MissingConstraints"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/dice_0" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="133dp"
-        android:layout_height="63dp"
+        android:layout_width="176dp"
+        android:layout_height="74dp"
         android:layout_marginTop="80dp"
         android:text="@string/roll"
-        android:textSize="24sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
