@@ -16,6 +16,10 @@ class Dice(private val sides: Int = 6) {
 }
 
 class MainActivity : AppCompatActivity() {
+
+
+    var diceImage: ImageView? = null
+
     @SuppressLint("ShowToast")
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -23,7 +27,13 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val rollButton: Button = findViewById(R.id.button)
+        diceImage = findViewById(R.id.imageView)
+
+        val rollButton: Button = findViewById(R.id.rollButton)
+
+        val resetButton: Button = findViewById(R.id.resetButton)
+
+        resetImage()
 
         rollButton.setOnClickListener {
 
@@ -32,15 +42,18 @@ class MainActivity : AppCompatActivity() {
             val randomNumber: Int = dice.roll()
 
             if (randomNumber == 3) {
-                val toast = Toast.makeText(
+                Toast.makeText(
                     this,
                     "It's your Lucky number \uD83E\uDD73",
                     Toast.LENGTH_SHORT
-                )
-                toast.show()
+                ).show()
             }
 
             this.updateImage(randomNumber)
+        }
+
+        resetButton.setOnClickListener {
+            resetImage()
         }
     }
 
@@ -58,5 +71,16 @@ class MainActivity : AppCompatActivity() {
             5 -> diceImage.setImageResource(R.drawable.dice_5)
             6 -> diceImage.setImageResource(R.drawable.dice_6)
         })
+    }
+
+    private fun resetImage() {
+
+        diceImage?.setImageResource(R.drawable.dice_0)
+
+        Toast.makeText(
+            this,
+            "Dice has been resetted",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
