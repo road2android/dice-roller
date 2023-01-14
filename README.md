@@ -13,5 +13,5 @@ This dice roller android app that rolls a dice and shows the result on screen. c
 
 ## Demonstration
 <p align="center">
-<img src="diceroller.gif" alt="Dice Roller App Demo" title="How Dice Roller App Works">
+<img src="diceroller.gif" width="600" alt="Dice Roller App Demo" title="How Dice Roller App Works">
 </p>
